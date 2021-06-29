@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--Fonts source-->
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Viaoda+Libre&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
+    <!--Icons source-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!--framwork style sheet-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+
+    <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ừ</title>
+</head>
+
+<body>
+    <header>
+        <!--navbar menu-->
+        <div class="nav-bar container-fluid">
+            <div class="nav-bar__menu">
+                <!--Hamburger menu in mobile frame-->
+                    <a href="#" class="hbg-menu">
+                        <div id="hbg-menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </a>
+                <!--//////////////////////////////-->
+
+                <!--Menu content-->
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">HOME</a>
+                            <span class="material-icons-round">
+                                home
+                            </span>
+
+                        </li>
+                        <li><a href="#">ABOUT ME</a>
+                            <span class="material-icons-round">
+                                account_circle
+                            </span>
+                        </li>
+
+                        <li><a href="#">PROJECT</a>
+                            <span class="material-icons-round">
+                                code
+                            </span>
+                        </li>
+
+                        <li><a href="#">CONTACT</a>
+                            <span class="material-icons-round">
+                                contactless
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--Setting for preferable display language and theme-->
+            <div class="customize d-flex align-items-center">
+
+                <!--language setting-->
+                <div class="language mx-4">
+                    <div style="color: white" class="lg-st d-flex">
+                        Languages
+                        <div class="lg-st__img" style="width:30px; height:30px">
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                y="0px" viewBox="0 0 469.333 469.333" style="enable-background:new 0 0 469.333 469.333;" xml:space="preserve">
+                                <g>
+                                    <g>
+                                        <g>
+                                            <path d="M253.227,300.267L253.227,300.267L199.04,246.72l0.64-0.64c37.12-41.387,63.573-88.96,79.147-139.307h62.507V64H192
+                            				V21.333h-42.667V64H0v42.453h238.293c-14.4,41.173-36.907,80.213-67.627,114.347c-19.84-22.08-36.267-46.08-49.28-71.467H78.72
+                            				c15.573,34.773,36.907,67.627,63.573,97.28l-108.48,107.2L64,384l106.667-106.667l66.347,66.347L253.227,300.267z" />
+                                            <path d="M373.333,192h-42.667l-96,256h42.667l24-64h101.333l24,64h42.667L373.333,192z M317.333,341.333L352,248.853
+                            				l34.667,92.48H317.333z" />
+                                        </g>
+                                    </g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                                <g>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="d-none lg-opt">
+                        <div id="vie">
+                            Vietnamese
+                            <!-- <div id="vie-img"> <img
+                        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBvbHlnb24gc3R5bGU9ImZpbGw6I0Q4MDAyNzsiIHBvaW50cz0iMTk2LjY0MSw4NS4zMzcgMCw4NS4zMzcgMCw0MjYuNjYzIDE5Ni42NDEsNDI2LjY2MyA1MTIsNDI2LjY2MyA1MTIsODUuMzM3ICIvPg0KPHBvbHlnb24gc3R5bGU9ImZpbGw6I0ZGREE0NDsiIHBvaW50cz0iMjU2LDE1Ny4yNzkgMjc4LjY2MywyMjcuMDI2IDM1MiwyMjcuMDI2IDI5Mi42NjgsMjcwLjEzMiAzMTUuMzMyLDMzOS44ODEgMjU2LDI5Ni43NzQgDQoJMTk2LjY2OCwzMzkuODgxIDIxOS4zMzIsMjcwLjEzMiAxNjAsMjI3LjAyNiAyMzMuMzM3LDIyNy4wMjYgIi8+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg==" /></div> -->
+                        </div>
+                        <div id="eng">
+                            English
+                            <!-- <div id="eng-img"> <img
+                        src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDUxMi4wMDIgNTEyLjAwMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyLjAwMiA1MTIuMDAyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBzdHlsZT0iZmlsbDojNDE0NzlCOyIgZD0iTTUwMy4xNzIsNDIzLjcyNUg4LjgyOGMtNC44NzUsMC04LjgyOC0zLjk1My04LjgyOC04LjgyOFY5Ny4xMDRjMC00Ljg3NSwzLjk1My04LjgyOCw4LjgyOC04LjgyOA0KCWg0OTQuMzQ1YzQuODc1LDAsOC44MjgsMy45NTMsOC44MjgsOC44Mjh2MzE3Ljc5M0M1MTIsNDE5Ljc3Miw1MDguMDQ3LDQyMy43MjUsNTAzLjE3Miw0MjMuNzI1eiIvPg0KPHBhdGggc3R5bGU9ImZpbGw6I0Y1RjVGNTsiIGQ9Ik01MTIsOTcuMTA0YzAtNC44NzUtMy45NTMtOC44MjgtOC44MjgtOC44MjhoLTM5LjQ5NWwtMTYzLjU0LDEwNy4xNDdWODguMjc2aC04OC4yNzZ2MTA3LjE0Nw0KCUw0OC4zMjIsODguMjc2SDguODI4QzMuOTUzLDg4LjI3NiwwLDkyLjIyOSwwLDk3LjEwNHYyMi44MzFsMTQwLjMwOSw5MS45MjdIMHY4OC4yNzZoMTQwLjMwOUwwLDM5Mi4wNjZ2MjIuODMxDQoJYzAsNC44NzUsMy45NTMsOC44MjgsOC44MjgsOC44MjhoMzkuNDk1bDE2My41NC0xMDcuMTQ3djEwNy4xNDdoODguMjc2VjMxNi41NzhsMTYzLjU0LDEwNy4xNDdoMzkuNDk1DQoJYzQuODc1LDAsOC44MjgtMy45NTMsOC44MjgtOC44Mjh2LTIyLjgzMWwtMTQwLjMwOS05MS45MjdINTEydi04OC4yNzZIMzcxLjY5MUw1MTIsMTE5LjkzNVY5Ny4xMDR6Ii8+DQo8Zz4NCgk8cG9seWdvbiBzdHlsZT0iZmlsbDojRkY0QjU1OyIgcG9pbnRzPSI1MTIsMjI5LjUxOCAyODIuNDgzLDIyOS41MTggMjgyLjQ4Myw4OC4yNzYgMjI5LjUxNyw4OC4yNzYgMjI5LjUxNywyMjkuNTE4IDAsMjI5LjUxOCANCgkJMCwyODIuNDgzIDIyOS41MTcsMjgyLjQ4MyAyMjkuNTE3LDQyMy43MjUgMjgyLjQ4Myw0MjMuNzI1IDI4Mi40ODMsMjgyLjQ4MyA1MTIsMjgyLjQ4MyAJIi8+DQoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGNEI1NTsiIGQ9Ik0xNzguOTQ4LDMwMC4xMzhMMC4yNSw0MTYuMTM1YzAuNjI1LDQuMjYzLDQuMTQsNy41OSw4LjU3Nyw3LjU5aDEyLjE1OWwxOTAuMzktMTIzLjU4NmgtMzIuNDI4DQoJCVYzMDAuMTM4eiIvPg0KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjRCNTU7IiBkPSJNMzQ2LjM4OCwzMDAuMTM4SDMxMy45NmwxOTAuMTEzLDEyMy40MDRjNC40MzEtMC40NzIsNy45MjgtNC4wOSw3LjkyOC04LjY0NnYtNy4yNTgNCgkJTDM0Ni4zODgsMzAwLjEzOHoiLz4NCgk8cGF0aCBzdHlsZT0iZmlsbDojRkY0QjU1OyIgZD0iTTAsMTA2Ljg0OWwxNjEuNzc5LDEwNS4wMTRoMzIuNDI4TDUuMTQzLDg5LjEzN0MyLjEyMyw5MC41NCwwLDkzLjU1NSwwLDk3LjEwNFYxMDYuODQ5eiIvPg0KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRjRCNTU7IiBkPSJNMzMyLjU2NiwyMTEuODYzTDUxMS42OTMsOTUuNTg2Yy0wLjc0NC00LjEyMi00LjE4NC03LjMwOS04LjUyMS03LjMwOWgtMTIuNjQ3TDMwMC4xMzgsMjExLjg2Mw0KCQlIMzMyLjU2NnoiLz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K" /></div> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!--Theme setting-->
+                <div style="color: white" class="th-st mx-4">
+                    Theme
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="brand">
+                <div style="width:50px; height:50px;" class="brand-logo_img ">
+                    <img class="img-fluid rounded-circle" src="./source/Img/avatar.jpg" alt="logo">
+                </div>
+                <div class="brand-name">NDB</div>
+            </div>
+
+        </div>
+    </header>
+    <!--End of header-->
+
+    <main>
+        <div class="container">
+            <div class="social-contact__container">
+            <!--container for sticky posision behavior of inner content-->
+                <div class="social-contact">
+                    <div class="line mx-auto" id="lineup"></div>
+                    <ul class="social-contact__links col">
+                        <li style="width: 30px; height: 30px;">
+                            <a href="https://www.facebook.com/Banbanus/" id="sc-link-whatapps">
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 405.02 405.02">
+                                    <path class="cls-1"
+                                        d="M435,543a183.47,183.47,0,0,1-215.81,32.28,19.48,19.48,0,0,0-15.51-1.2l-91,31.86,31.86-91a19.44,19.44,0,0,0-1.2-15.51,183.45,183.45,0,0,1,162-269.54h0A183.43,183.43,0,0,1,435,543Z"
+                                        transform="translate(-94.68 -218.81)" />
+                                    <path class="cls-1"
+                                        d="M370.62,499.78c-3.7,3.7-15.08,5-35-3.52-21-9-44.45-25.84-66-47.4s-38.39-45-47.4-66c-8.52-19.89-7.22-31.27-3.52-35l22.19-22.2,27.42,27.42-13.14,13.15c-5.94,5.94-3.62,14.24.19,21.71,25.53,27.93,54,51.91,80,74.89,7.47,3.82,10.93,6.4,16.88.46l13.14-13.14,27.42,27.42Z"
+                                        transform="translate(-94.68 -218.81)" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li style="width: 30px; height: 30px;">
+                            <a href="https://www.instagram.com/_banban911/" id="socialc-link-github">
+                                <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 373.67 393.52">
+                                    <path class="cls-1"
+                                        d="M-432.69,427.79c0-6.11-.23-22.27-.36-43.71-71.2,15.52-86.24-34.46-86.24-34.46C-530.9,319.92-547.7,312-547.7,312-571,296.08-546,296.4-546,296.4c25.69,1.83,39.2,26.5,39.2,26.5,22.84,39.26,59.93,27.93,74.52,21.34,2.31-16.61,8.93-27.93,16.26-34.37-56.83-6.49-116.61-28.54-116.61-127,0-28.07,10-51,26.37-69-2.66-6.49-11.42-32.64,2.5-68,0,0,21.5-6.91,70.4,26.34a244.18,244.18,0,0,1,64.09-8.64,244.84,244.84,0,0,1,64.1,8.67c48.86-33.25,70.33-26.33,70.33-26.33,14,35.39,5.19,61.5,2.56,68,16.42,18,26.31,40.92,26.31,69,0,98.72-59.84,120.45-116.87,126.81,9.19,7.94,17.38,23.62,17.38,47.59,0,34.37-.32,62.08-.32,70.49"
+                                        transform="translate(568.61 -34.28)" />
+                                </svg>
+
+                            </a>
+                        </li>
+                        <li style="width: 30px; height: 30px;">
+                            <a href="http://www.twitter.com/NguyenDuyBn3" id="sc-link-twitter">
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 479.55 400.02">
+                                    <path class="cls-1"
+                                        d="M199.24,551.18c12.85-9.88,6-30.45-10.1-30.79a89.64,89.64,0,0,1-70.38-36.61A121.73,121.73,0,0,0,142.22,480c17.43-4.72,16.61-29.88-1.1-33.43a88.19,88.19,0,0,1-66.83-60,118.66,118.66,0,0,0,26.21,3.48c17.39.09,24-22.2,9.78-31.52-32-21.06-45.59-58.24-36.56-93.2a319.45,319.45,0,0,0,211.62,94.46c11.47.71,20.09-10.08,17.57-21-10.88-47.17,15.46-80.23,43.76-95.47,28-15.12,72.94-19.84,107.4,16.32,10.24,10.79,44.79,11.2,62.36,7.1-7.88,14.84-20,28.93-31.34,36.86a17.16,17.16,0,0,0-7.31,14.91c3.69,75.26-24.35,150.09-76.93,205.28-53,55.6-126.21,86.23-206.28,86.23A288.49,288.49,0,0,1,102,594.84a231.92,231.92,0,0,0,97.25-43.66Z"
+                                        transform="translate(-57.94 -220.99)" />
+                                </svg>
+
+                            </a>
+                        </li>
+                        <li style="width: 30px; height: 30px;">
+                            <a href="#" id="social__linkedin">
+                                <svg id="layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 391.51 403.48">
+
+                                    <path class="cls-1" d="M119.83,350.3h65.74V611.74H119.83Z"
+                                        transform="translate(-101.75 -219.26)" />
+                                    <path class="cls-1"
+                                        d="M112.75,270.21a39.95,39.95,0,1,1,39.95,39.94A40,40,0,0,1,112.75,270.21Z"
+                                        transform="translate(-101.75 -219.26)" />
+                                    <path class="cls-1"
+                                        d="M291.45,611.74H225.71V350.3h60.72v38.81l21.74.12,4-6.27A92.14,92.14,0,0,1,390,340.63c50.58,0,91.08,38.59,92.2,87.85l0,183.26H416.5l-.1-145.54a62.48,62.48,0,1,0-124.95,0Z"
+                                        transform="translate(-101.75 -219.26)" />
+                                </svg>
+
+                            </a>
+                        </li>
+                        <li style="width: 30px; height: 30px;">
+                            <a href="#" id="sc-link-instagram">
+                                <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 398.79 398.79">
+                                    <path class="cls-1"
+                                        d="M486.9,519.4a91.1,91.1,0,0,1-91,91H199.1a91.1,91.1,0,0,1-91-91V322.6a91.1,91.1,0,0,1,91-91H395.9a91.1,91.1,0,0,1,91,91Z"
+                                        transform="translate(-98.1 -221.6)" />
+                                    <path class="cls-1"
+                                        d="M297.5,513.17A92.17,92.17,0,1,1,389.67,421,92.27,92.27,0,0,1,297.5,513.17Z"
+                                        transform="translate(-98.1 -221.6)" />
+                                    <circle class="cls-1" cx="316.24" cy="85.32" r="19.81" />
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="line" id="linedown"></div>
+                </div>
+            </div>
+            <div class="main-content">
+
+                <!--Cover letter, I mean some words to lure the HR-->
+                <div class="intro">
+                    <div class="intro-content">
+                        <section>
+                        <h4>Ola, my name is</h4>
+                        <!--name first, of course, as big as it can-->
+                        <p style="color:rgb(13, 97, 97); font-size: 50px; letter-spacing: 4px;">NGUYEN DUY BAN (BANUS)</p>
+                        <!--what other call me, lol, just imagine!!!-->
+                        <p style="font-size: 40px; font-weight: 400;">DEVELOP USERS-FRIENDLY WEBSITES</p>
+                        <!--oh, hire me please-->
+                        <p>
+                            I'm a Hanoi-based fresher specialized in building convenient and fucking usable webs.
+                            I'm looking for an intership position in IT-related companies to sharpen my skills.
+                        </p>
+                        </section>
+                        <!--button go to contact div-->
+                        <div class="get-in-touch">
+                            <button class="btn link__btn">Get in touch</button>
+                        </div>
+                    </div>
+                    <div class="intro-subcontent">
+                        <a class="card" href="#">
+                            <img width="100%" height="100%"
+                                src="./source/Img/zhirou2.jpg" alt="a">
+                            <div class="go-corner" href="#">
+                                <div class="go-arrow">
+                                    →
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div target="#about-me" class="about-me">
+
+                    <div id="self-img">
+                        <img src="https://1.viki.io/c/35630c/Beacuse-Its-My-First-Life_thumbnail_1560x872.jpg?x=b"
+                            alt="avatar">
+                    </div>
+                    <div id="self-infor">
+                        <p>
+                        <h2>About me</h2>
+                        - An open introvert person -
+                        <br>
+                        <!--so touching bro, how you like that-->
+                        I am Nguyen Duy Ban, an English majored student, translating and interpretation orientation at
+                        Hanoi University. Sounds strange right!
+                        Soon finding interest in UX but till recently, I started being into front-end web development.
+                        Youtube is my teacher, Google is my friend ... which I take up self-learning for a while.
+                        I consider myself as an absolute newbie in IT process, yet, the baby is growing faster and
+                        faster.
+                        With the aim to get an internship, I got basic skills in <strong>Html and Css (Sass and Gulp)</strong>
+                        beside <strong> familiar with Javascript framework</strong>
+
+
+                        </p>
+                    </div>
+                </div>
+                <div class="image-grid">
+                    <div id="img-gr-1"><img src="./source/svg-Img/bg01.svg" alt="#"></div>
+                    <div id="img-gr-1"><img src="./source/svg-Img/bg02.svg" alt="#"></div>
+                    <div id="img-gr-1"><img src="./source/svg-Img/bg03.svg" alt="#"></div>
+                    <div id="img-gr-1"><img src="./source/svg-Img/bg04.svg" alt="#"></div>
+                    <div id="img-gr-1"><img src="./source/svg-Img/bg05.svg" alt="#"></div>
+                    <div id="img-gr-1"><img src="./source/svg-Img/bg06.svg" alt="#"></div>
+                    <div id="img-gr-1"><img src="./source/svg-Img/bg07.svg" alt="#"></div>
+                    <div id="img-gr-1"><img src="./source/svg-Img/bg08.svg" alt="#"></div>
+                    <div id="img-gr-1"><img src="./source/svg-Img/bg09.svg" alt="#"></div>
+                    <div id="img-gr-1"><img src="./source/svg-Img/bg10.svg" alt="#"></div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer-line">
+                <div class="brand">
+                    <div id="brand-logo_img">
+                        <img src="./source/Img/avatar.jpg" alt="logo">
+                    </div>
+                    <div id="brand-name">NDB</div>
+                </div>
+                <div class="footer-btn">
+                    <button class="btn cfw-btn">Contact for work</button>
+                    <button class="btn ctp-btn">Choose the plan</button>
+                </div>
+            </div>
+            <div class="footer-contact row container-xxl justify-content-md-center">
+                <div class="col">
+                    <p>CONTENT</p>
+                    <ul>
+                        <li><a href="#">Authors</a></li>
+                        <li><a href="#">Icons</a></li>
+                        <li><a href="#">Stickers</a></li>
+                        <li><a href="#">Icon packs</a></li>
+                        <li><a href="#">Sticker packs</a></li>
+                        <li><a href="#">Icon tags</a></li>
+                        <li><a href="#">Sticker tags</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <p>APPS</p>
+                    <ul>
+                        <li><a href="#">Unicons</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">Patterns generator</a></li>
+                        <li><a href="#">Google Workspace</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <p>HELP</p>
+                    <ul>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Icon styles</a></li>
+                        <li><a href="#">Flaticon Collections</a></li>
+                        <li><a href="#">Patterns generator</a></li>
+                        <li><a href="#">Icon editor</a></li>
+                        <li><a href="#">Follow</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <p>COMPANY</p>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact us</a></li>
+                        <li><a href="#">Our license</a></li>
+                        <li><a href="#">Plan and Pricing</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">What's new</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <p>OTHERS</p>
+
+                </div>
+            </div>
+            <div class="terms">
+                <ul>
+                    <li id="term-item"><a href="#">Terms & conditions</a></li>
+                    <li id="term-item"><a href="#">Privacy policy</a></li>
+                    <li id="term-item"><a href="#">Cookies policy</a></li>
+                    <li id="term-item"><a href="#">Copyrights Notification</a></li>
+                    <li id="term-item"><a href="#">Cookies Setting</a></li>
+                </ul>
+            </div>
+            <div class="lb"></div>
+            <div class="credit">
+                <h5>@2021 DuyBan. All rights reserved.</h5>
+            </div>
+        </div>
+        <div class="references">
+            <p>NguyenDuyBan</p>
+            <div class="outer-links d-flex">
+                <ul>
+                    <li id="site-link"><a href="#">I</a></li>
+                    <li id="site-link"><a href="#">Will</a></li>
+                    <li id="site-link"><a href="#">Miss</a></li>
+                    <li id="site-link"><a href="#">You</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="./node_modules/animejs/lib/anime.min.js"></script>
+    <script src="Ừ.js"></script>
+</body>
+
+</html>
